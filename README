@@ -1,0 +1,4 @@
+Installation
+-------------
+1) Add https://raw.github.com/d87/portage-overlay/master/repository.xml to the overlay list in layman.cfg
+2) layman -a d87
