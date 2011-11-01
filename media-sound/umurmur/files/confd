@@ -1,0 +1,5 @@
+UMURMURD_CONF="/etc/umurmur/umurmur.conf"
+UMURMURD_PID="/var/run/umurmur.pid"
+
+# -r -- realtime priority
+UMURMURD_OPTS="-r"

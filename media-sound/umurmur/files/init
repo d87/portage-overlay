@@ -1,0 +1,19 @@
+#!/sbin/runscript
+
+depend() {
+        need net   
+}
+
+start() {
+        ebegin "Starting uMurmur VoIP Server"
+	start-stop-daemon --start \
+		--exec umurmurd -- ${UMURMURD_OPTS} -c "${UMURMURD_CONF}" -p "${UMURMURD_PID}"
+	eend $?
+}
+
+stop() {
+        ebegin "Stopping uMurmur VoIP Server"
+        start-stop-daemon --stop --pidfile "${UMURMURD_PID}"
+        eend $?
+}
+
